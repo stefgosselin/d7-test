@@ -1,0 +1,48 @@
+<?php
+
+function webtekdemo_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#webtekdemo':
+      $output = "Help text!";
+      return "HEH";
+    break;
+    }
+}
+////////////////////////////////
+
+
+
+
+ function webtekdemo_menu() {
+
+    $items['hello'] = array(
+      'title' => 'Hello world!',
+      'page callback' => 'page_hello_world',
+      'access arguments' => array('access content'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+
+    $items['goodbye'] = array(
+      'title' => 'Goodbye world!',
+      'page callback' => 'page_goodbye_world',
+      'access arguments' => array('access content'),
+      'type' => MENU_NORMAL_ITEM,
+    );
+
+
+    return $items;
+  }
+
+
+
+
+///////////////////////////////
+  function page_goodbye_world(){
+    $output= "<h1>Goodbye WORLD!!!</h1>";
+    return $output;
+  }
+
+    function page_hello_world(){
+    $output= "<h1>HELLO WORLD!!!</h1>";
+    return $output;
+  }

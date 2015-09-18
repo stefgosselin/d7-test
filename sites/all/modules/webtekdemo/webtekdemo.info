@@ -1,0 +1,5 @@
+name = Webtek demo
+description = Demo de webtek
+core = 7.x
+; files[] = webtekdemo.module
+configure = admin/config/webtekdemo/settings
